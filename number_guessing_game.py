@@ -8,6 +8,7 @@ def get_difficulty():
     print("2. Medium (1-50, 7 attempts)")
     print("3. Hard (1-100, 5 attempts)")
 
+    
     choice = input("Enter 1 / 2 / 3: ")
 
     if choice == '1':
