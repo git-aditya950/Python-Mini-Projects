@@ -2,7 +2,6 @@ import random
 
 print(" Welcome to Aditya's Number Guessing Game!")
 
-# Set range
 LOW = 1
 HIGH = 100
 secret_number = random.randint(LOW, HIGH)
