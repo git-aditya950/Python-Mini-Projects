@@ -1,4 +1,4 @@
-print("Welcome to Aditya's Multiplication Table Generator ")
+print("Multiplication Table Generator ")
 
 def generate_table(number, upto):
     print(f"\nMultiplication Table for {number} (up to {upto}):\n")
