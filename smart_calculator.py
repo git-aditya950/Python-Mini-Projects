@@ -1,7 +1,7 @@
 def add(a, b): return a + b
 def subtract(a, b): return a - b
 def multiply(a, b): return a * b
-def divide(a, b): return "❌ Divide by zero!" if b == 0 else a / b
+def divide(a, b): return "❌  Divide by zero!" if b == 0 else a / b
 
 def calculate(num1, num2, operator):
     if operator == '+':
@@ -13,7 +13,7 @@ def calculate(num1, num2, operator):
     elif operator == '/':
         return divide(num1, num2)
     else:
-        return "❌ Invalid operator!"
+        return "❌ Invalid operator!" 
 
 def main():
     print("🔢 Aditya's Calculator (Refactored)")
