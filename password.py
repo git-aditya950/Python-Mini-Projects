@@ -10,7 +10,6 @@ def generate_password(length=12, use_digits=True, use_special=True):
     if length < 4:
         return "❌ Password too short!"
     return ''.join(random.sample(characters, length))
-
 def main():
     print("🔐 Aditya's Password Generator (Refactored)")
     try:
@@ -20,7 +19,7 @@ def main():
         password = generate_password(length, use_digits, use_special)
         print(f"✅ Your Password: {password}")
     except ValueError:
-        print("❌ Please enter a valid number.")
+        print("❌ Please enter a valid number.")  
 
 if __name__ == "__main__":
     main()
