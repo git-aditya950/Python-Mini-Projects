@@ -13,5 +13,3 @@ I'm building one project every day to sharpen my skills and build a consistent G
 | 4   | Multiplication Table Generator   | Dynamic table + save to file option              |
 | 5   | Password Generator               | Random secure password with user preferences     |
 | 6   | Code Refactoring                 | Used functions + `main()` for cleaner structure  |
-
-## 📦 How to Run
