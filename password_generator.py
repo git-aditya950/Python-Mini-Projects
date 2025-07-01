@@ -27,4 +27,4 @@ try:
     print(f"\n✅ Generated Password: {password}")
 
 except ValueError:
-    print("❌ Please enter a valid number for length.")
+    print(" Please enter a valid number for length.")
