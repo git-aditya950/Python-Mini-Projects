@@ -15,9 +15,9 @@ def save_tasks(tasks):
 
 def show_tasks(tasks):
     if not tasks:
-        print("\n📭 No tasks yet.")
+        print("\nNo tasks yet.")
     else:
-        print("\n📝 Your To-Do List:")
+        print("\nYour To-Do List:")
         for idx, task in enumerate(tasks, 1):
             print(f"{idx}. {task}")
 
@@ -39,7 +39,7 @@ def main():
             task = input("Enter new task: ")
             tasks.append(task)
             save_tasks(tasks)
-            print("✅ Task added.")
+            print("Task added.")
         elif choice == '3':
             show_tasks(tasks)
             try:
@@ -47,16 +47,16 @@ def main():
                 if 1 <= num <= len(tasks):
                     removed = tasks.pop(num - 1)
                     save_tasks(tasks)
-                    print(f"🗑️ Deleted: {removed}")
+                    print(f"Deleted: {removed}")
                 else:
-                    print("❌ Invalid task number.")
+                    print("Invalid task number.")
             except ValueError:
-                print("❌ Enter a number.")
+                print("Enter a number.")
         elif choice == '4':
-            print("👋 Exiting. Have a productive day!")
+            print("Exiting. Have a productive day!")
             break
         else:
-            print("❌ Invalid choice. Try again.")
+            print("Invalid choice. Try again.")
 
 if __name__ == "__main__":
     main()
