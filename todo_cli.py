@@ -1,5 +1,3 @@
-# todo_cli.py
-
 FILENAME = "tasks.txt"
 
 def load_tasks():
