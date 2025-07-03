@@ -5,10 +5,9 @@ def get_weather(city):
     base_url = "https://api.openweathermap.org/data/2.5/weather?"
 
     full_url = f"{base_url}q={city}&appid={api_key}&units=metric"
-    print(f"\n🔎 Requesting URL: {full_url}")  # Debug line
+    print(f"\n🔎 Requesting URL: {full_url}")  
     response = requests.get(full_url)
 
-    # Print raw response for debugging
     print("📦 Raw API Response:", response.text)
 
     if response.status_code == 200:
