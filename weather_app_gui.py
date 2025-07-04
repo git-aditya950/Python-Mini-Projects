@@ -5,7 +5,7 @@ from io import BytesIO
 
 def get_weather():
     city = city_entry.get()
-    api_key = "202de3ba1dc324adc420da39f914baca"  # Replace with your key
+    api_key = "202de3ba1dc324adc420da39f914baca"
     base_url = "http://api.openweathermap.org/data/2.5/weather"
 
     params = {
@@ -33,7 +33,6 @@ def get_weather():
             fg="#ffffff"
         )
 
-        # Show weather icon
         icon_url = f"http://openweathermap.org/img/wn/{icon_code}@2x.png"
         icon_data = requests.get(icon_url).content
         icon_img = Image.open(BytesIO(icon_data))
@@ -46,16 +45,13 @@ def get_weather():
         result_label.config(text="⚠️ City not found or API error.", fg="red")
         icon_label.config(image="")
 
-# -------------------- UI --------------------
 root = tk.Tk()
 root.title("🌦 Weather Forecast")
 root.geometry("400x450")
 root.configure(bg="#1e1e2e")
 
-# Title
 tk.Label(root, text="Weather App", font=("Segoe UI", 20, "bold"), fg="#ffffff", bg="#1e1e2e").pack(pady=15)
 
-# Entry box
 entry_frame = tk.Frame(root, bg="#1e1e2e")
 entry_frame.pack()
 
@@ -63,19 +59,16 @@ city_entry = tk.Entry(entry_frame, font=("Segoe UI", 14), width=20, justify="cen
 city_entry.pack(ipady=8, pady=5)
 city_entry.insert(0, " ")
 
-# Button
 get_btn = tk.Button(root, text="Get Weather", command=get_weather, font=("Segoe UI", 12, "bold"), bg="#4f46e5", fg="white", relief="flat", padx=10, pady=6)
 get_btn.pack(pady=15)
 
-# Icon
 icon_label = tk.Label(root, bg="#1e1e2e")
 icon_label.pack()
 
-# Result
 result_label = tk.Label(root, text="", font=("Segoe UI", 14), bg="#1e1e2e", fg="white", justify="center")
 result_label.pack(pady=10)
 
-# Footer
+
 tk.Label(root, text="Powered by OpenWeatherMap", font=("Segoe UI", 9), bg="#1e1e2e", fg="#aaaaaa").pack(side="bottom", pady=10)
 
 root.mainloop()
