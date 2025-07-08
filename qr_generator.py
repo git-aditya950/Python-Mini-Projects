@@ -1,3 +1,4 @@
+
 import qrcode
 
 def generate_qr(data, filename):
