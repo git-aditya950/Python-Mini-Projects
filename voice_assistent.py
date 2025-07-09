@@ -3,16 +3,14 @@ import pyttsx3
 import pywhatkit
 import datetime
 
-# Initialize the speaker
 engine = pyttsx3.init()
 
-# Set Jarvis-like voice (British male)
 voices = engine.getProperty('voices')
 for voice in voices:
     if "english" in voice.name.lower() and "uk" in voice.name.lower():
         engine.setProperty('voice', voice.id)
         break
-engine.setProperty('rate', 150)  # Slower, clearer speech
+engine.setProperty('rate', 150) 
 
 def speak(text):
     print(f"🧠 Jarvis: {text}")
