@@ -22,7 +22,6 @@ def listen():
     with sr.Microphone() as source:
         print("🎙️ Listening...")
         audio = recognizer.listen(source)
-
     try:
         command = recognizer.recognize_google(audio)
         print(f"🗣️ You said: {command}")
@@ -33,6 +32,7 @@ def listen():
     except sr.RequestError:
         speak("Speech service is unavailable at the moment.")
         return ""
+
 
 def run_jarvis():
     speak("Hello, I am Jarvis. How may I assist you today?")
@@ -58,7 +58,6 @@ def run_jarvis():
         elif "exit" in command or "stop" in command or "thank you" in command:
             speak("Goodbye, Sir. Shutting down.")
             break
-
         else:
             speak("Sorry, I didn't understand that command.")
 
