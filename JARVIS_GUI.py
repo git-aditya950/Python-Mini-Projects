@@ -11,7 +11,6 @@ import os
 
 openai.api_key = "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"
 
-
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)  
