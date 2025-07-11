@@ -9,10 +9,8 @@ import webbrowser
 import datetime
 import os
 
-# 🔑 Set your OpenAI API key here
 openai.api_key = "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"
 
-# 🔊 Text-to-speech setup
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
@@ -22,7 +20,6 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-# 🎧 Wake word detector
 def wait_for_wake_word():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
@@ -38,7 +35,6 @@ def wait_for_wake_word():
             except:
                 continue
 
-# 🎙 Main voice command
 def listen_command():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
@@ -55,7 +51,6 @@ def listen_command():
         except sr.WaitTimeoutError:
             return "Listening timed out."
 
-# ⚙️ Local smart commands
 def handle_smart_command(command):
     command = command.lower()
 
@@ -72,7 +67,7 @@ def handle_smart_command(command):
         return f"The time is {now}."
 
     elif "play music" in command:
-        music_folder = "C:\\Users\\adity\\Music"  # Update this path
+        music_folder = "C:\\Users\\adity\\Music"  
         if os.path.exists(music_folder):
             songs = os.listdir(music_folder)
             if songs:
@@ -93,7 +88,6 @@ def handle_smart_command(command):
 
     return None
 
-# 🧠 OpenAI response
 def ask_openai(prompt):
     try:
         response = openai.ChatCompletion.create(
