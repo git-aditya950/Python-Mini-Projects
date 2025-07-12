@@ -4,10 +4,8 @@ from tkinter import filedialog
 import PyPDF2
 from openai import OpenAI
 
-# Initialize GPT client
 client = OpenAI(api_key="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")  # replace with your OpenAI key
 
-# App class
 class PDFChatApp(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -68,7 +66,6 @@ class PDFChatApp(ctk.CTk):
         except Exception as e:
             self.result_box.insert(tk.END, f"❌ Error: {str(e)}\n")
 
-# Launch the app
 if __name__ == "__main__":
     app = PDFChatApp()
     app.mainloop()
