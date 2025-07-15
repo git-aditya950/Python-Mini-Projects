@@ -3,7 +3,7 @@ import requests
 
 def convert_currency(amount, from_currency, to_currency):
     url = f"https://api.exchangerate.host/convert?from={from_currency}&to={to_currency}&amount={amount}"
-    print("DEBUG URL:", url)  # You can keep or remove this
+    print("DEBUG URL:", url)  
     response = requests.get(url)
     data = response.json()
     if "result" in data and data["result"] is not None:
