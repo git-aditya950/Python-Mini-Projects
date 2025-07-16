@@ -2,9 +2,7 @@ import pyautogui
 import datetime
 import os
 import time
-
 from tkinter import filedialog, Tk
-
 def take_screenshot():
 
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -30,7 +28,6 @@ if __name__ == "__main__":
     print("📸 Screenshot Tool")
     input("Press Enter to take a screenshot...")
     take_screenshot()
-
 
 if save_path:
     print("⏳ Taking screenshot in 3 seconds...")
